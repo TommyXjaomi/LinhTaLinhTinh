@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>20/10 • Thiệp gửi Lê Minh Anh</title>
+    <meta name="description" content="Tấm thiệp 20/10 tinh tế với hiệu ứng đẹp dành cho Lê Minh Anh.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <noscript>
+      <div class="no-js">
+        <h1>Chúc mừng 20/10</h1>
+        <p>Gửi <strong>Lê Minh Anh</strong>, chúc Chú một ngày Phụ Nữ Việt Nam thật rực rỡ, luôn vui vẻ và hạnh phúc!</p>
+      </div>
+    </noscript>
+
+    <!-- Intro Overlay: Ribbon pull (placeholder, wired later) -->
+    <div id="intro-overlay" aria-hidden="false">
+      <div class="ribbon">
+        <button id="ribbon-handle" class="ribbon-handle" aria-label="Kéo ruy băng để mở thiệp">
+          Kéo để mở ✨
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Stage -->
+    <main id="app" class="celebration-stage" aria-live="polite">
+      <!-- Floating Hearts -->
+      <div class="floating-hearts" aria-hidden="true">
+        <div class="heart-float heart-1">💖</div>
+        <div class="heart-float heart-2">💕</div>
+        <div class="heart-float heart-3">💗</div>
+        <div class="heart-float heart-4">💝</div>
+        <div class="heart-float heart-5">💘</div>
+      </div>
+
+      <!-- Main Celebration Content -->
+      <div class="celebration-content">
+        <div class="celebration-title">
+          <h1 class="main-title">Chúc Mừng 20/10</h1>
+          <h2 class="recipient-name" id="recipient-name">Lê Minh Anh</h2>
+        </div>
+        
+        <div class="celebration-message">
+          <p class="message-line">✨ Chú là người phụ nữ tuyệt vời nhất ✨</p>
+          <p class="message-line">💖 Luôn xinh đẹp, mạnh mẽ và hạnh phúc 💖</p>
+          <p class="message-line">🌟 Chúc Chú một ngày 20/10 rực rỡ 🌟</p>
+        </div>
+
+        <div class="sender-line">
+          <p class="sender-text">— From DangTunCTVL w love</p>
+        </div>
+
+      </div>
+
+      <!-- Play Button -->
+      <button id="slideshow-play" class="play-btn" aria-label="Xem ảnh kỷ niệm">
+        <span class="play-icon">▶</span>
+        <span class="play-text">Xem lại 1 chút nghen</span>
+      </button>
+
+      <!-- Background Hearts -->
+      <div class="bg-hearts" aria-hidden="true">
+        <div class="bg-heart bg-heart-1"></div>
+        <div class="bg-heart bg-heart-2"></div>
+        <div class="bg-heart bg-heart-3"></div>
+      </div>
+    </main>
+
+    <!-- Slideshow Modal -->
+    <div id="slideshow-modal" class="slideshow-modal" role="dialog" aria-modal="true" aria-labelledby="slideshow-title" hidden>
+      <div class="slideshow-backdrop" data-close></div>
+      <div class="slideshow-container">
+        <div class="slideshow-header">
+          <h2 id="slideshow-title">Nhớ khum</h2>
+          <button id="slideshow-close" class="close-btn" aria-label="Đóng slideshow">×</button>
+        </div>
+        <div class="slideshow-content">
+          <div class="slide-wrapper">
+            <img id="slide-image" class="slide-image" alt="Kỷ niệm">
+            <div class="slide-overlay">
+              <button id="prev-btn" class="nav-btn prev-btn" aria-label="Ảnh trước">‹</button>
+              <button id="next-btn" class="nav-btn next-btn" aria-label="Ảnh sau">›</button>
+            </div>
+          </div>
+          <div class="slide-indicators">
+            <div class="indicator active" data-slide="0"></div>
+            <div class="indicator" data-slide="1"></div>
+            <div class="indicator" data-slide="2"></div>
+            <div class="indicator" data-slide="3"></div>
+            <div class="indicator" data-slide="4"></div>
+            <div class="indicator" data-slide="5"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas" class="confetti-canvas" aria-hidden="true"></canvas>
+
+    <!-- Hidden audio (piano lofi) -->
+    <audio id="bg-audio" preload="auto" loop>
+      <source src="https://www.bensound.com/bensound-music/bensound-pianomoment.mp3" type="audio/mpeg">
+      <source src="https://archive.org/download/piano-lofi/piano-lofi.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+
+
